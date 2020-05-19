@@ -9,5 +9,8 @@ namespace MuqDice
     public class RandomDiceConfig:IConfig
     {
         public string _Id { get; set; }
+        public int Sum;
+        public int[] FaceQualitys;
+        public int Weight;
     }
 }

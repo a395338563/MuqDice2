@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace MuqDice.Editor
 {
-    public class DiceModel
+    public class MagicModel
     {
         public string _Id;
-        public string[] _Faces;
+        public string _SkillId;
     }
 }

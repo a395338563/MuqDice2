@@ -13,5 +13,7 @@ namespace MuqDice
         public int Range;
         public int Area;
         public int Damage;
+        public int CastTime;
+        public int[] Buffs;
     }
 }

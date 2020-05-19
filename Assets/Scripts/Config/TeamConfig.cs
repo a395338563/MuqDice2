@@ -13,6 +13,6 @@ namespace MuqDice
         public int[] UnitIds;
         public int[] UnitPos;
         public int PlayerPos;
-        public string Event;
+        public string[] Events;
     }
 }

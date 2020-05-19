@@ -10,5 +10,6 @@ namespace MuqDice
     {
         public string _Id { get; set; }
         public ElementEnum[] Elements;
+        public int SkillId;
     }
 }

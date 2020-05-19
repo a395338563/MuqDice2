@@ -6,9 +6,8 @@ using System.Threading.Tasks;
 
 namespace MuqDice.Editor
 {
-    public class DiceModel
+    public class DiceFaceModel
     {
         public string _Id;
-        public string[] _Faces;
     }
 }

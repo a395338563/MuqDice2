@@ -9,5 +9,7 @@ namespace MuqDice
     public class DiceFaceConfig : IConfig
     {
         public string _Id { get; set; }
+        public int Quality;
+        public ElementEnum[] Elements;
     }
 }

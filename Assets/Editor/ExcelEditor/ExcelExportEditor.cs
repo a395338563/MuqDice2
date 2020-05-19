@@ -21,6 +21,76 @@ namespace MuqDice
         [MenuItem("Tools/导出配置")]
         private static void ExportAll()
         {
+            var mBuff = Export<BuffModel>("data.xlsx", "buff");
+            var mDiceFace = Export<DiceFaceModel>("data.xlsx", "diceFace");
+            var mDice = Export<DiceModel>("data.xlsx", "dice");
+            var mMagic = Export<MagicModel>("data.xlsx", "magic");
+            var mRandomDice = Export<RandomDiceModel>("data.xlsx", "randomDice");
+            var mSkill = Export<SkillModel>("data.xlsx", "skill");
+            var mSystem = Export<SystemModel>("data.xlsx", "system");
+            var mTeam = Export<TeamModel>("data.xlsx", "team");
+            var mUnit = Export<UnitModel>("data.xlsx", "unit");
+
+            var buffs = Export<BuffConfig>("data.xlsx", "buff");
+            var diceFaces = Export<DiceFaceConfig>("data.xlsx", "diceFace");
+            var dices = Export<DiceConfig>("data.xlsx", "dice");
+            for (int i = 0; i < dices.Count; i++)
+            {
+                if (mDice[i]._Faces != null)
+                {
+                    dices[i].Faces = mDice[i]._Faces.Select(x => mDiceFace.FindIndex(s => s._Id == x)).ToArray();
+                    if (dices[i].Faces.Contains(-1)) throw new Exception($"Dice {dices[i]._Id } 出错： Faces");
+                }
+            }
+            var magics = Export<MagicConfig>("data.xlsx", "magic");
+            for (int i = 0; i < magics.Count; i++)
+            {
+                if (mMagic[i]._SkillId != null)
+                {
+                    magics[i].SkillId = mSkill.FindIndex(s => s._Id == mMagic[i]._SkillId);
+                    if (magics[i].SkillId == -1) throw new Exception($"Magic { magics[i]._Id } 出错： SkillId");
+                }
+            }
+            var randomDices = Export<RandomDiceConfig>("data.xlsx", "randomDice");
+            var skills = Export<SkillConfig>("data.xlsx", "skill");
+            for (int i = 0; i < skills.Count; i++)
+            {
+                if (mSkill[i]._Buffs != null)
+                {
+                    skills[i].Buffs = mSkill[i]._Buffs.Select(x => mBuff.FindIndex(s => s._Id == x)).ToArray();
+                    if (skills[i].Buffs.Contains(-1)) throw new Exception($"Skill {skills[i]._Id } 出错： Buffs");
+                }
+            }
+            var systems = Export<SystemConfig>("data.xlsx", "system");
+            var teams = Export<TeamConfig>("data.xlsx", "team");
+            for (int i = 0; i < teams.Count; i++)
+            {
+                if (mTeam[i]._UnitIds != null)
+                {
+                    teams[i].UnitIds = mTeam[i]._UnitIds.Select(x => mUnit.FindIndex(s => s._Id == x)).ToArray();
+                    if (teams[i].UnitIds.Contains(-1)) throw new Exception($"Team {teams[i]._Id } 出错： UnitIds");
+                }
+            }
+            var units = Export<UnitConfig>("data.xlsx", "unit");
+            for (int i = 0; i < units.Count; i++)
+            {
+                if (mUnit[i]._Skills != null)
+                {
+                    units[i].Skills = mUnit[i]._Skills.Select(x => mSkill.FindIndex(s => s._Id == x)).ToArray();
+                    if (units[i].Skills.Contains(-1)) throw new Exception($"Unit {units[i]._Id } 出错： Skills");
+                }
+            }
+
+            writeData("buff", buffs);
+            writeData("diceFace", diceFaces);
+            writeData("magic", magics);
+            writeData("dice", dices);
+            writeData("randomDice", randomDices);
+            writeData("skill", skills);
+            writeData("system", systems);
+            writeData("team", teams);
+            writeData("unit", units);
+
             AssetDatabase.Refresh();
             Debug.Log("导出成功");
         }
