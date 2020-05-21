@@ -81,15 +81,15 @@ namespace MuqDice
                 }
             }
 
-            writeData("buff", buffs);
-            writeData("diceFace", diceFaces);
-            writeData("magic", magics);
-            writeData("dice", dices);
-            writeData("randomDice", randomDices);
-            writeData("skill", skills);
-            writeData("system", systems);
-            writeData("team", teams);
-            writeData("unit", units);
+            writeData("buff.txt", buffs);
+            writeData("diceFace.txt", diceFaces);
+            writeData("magic.txt", magics);
+            writeData("dice.txt", dices);
+            writeData("randomDice.txt", randomDices);
+            writeData("skill.txt", skills);
+            writeData("system.txt", systems);
+            writeData("team.txt", teams);
+            writeData("unit.txt", units);
 
             AssetDatabase.Refresh();
             Debug.Log("导出成功");
@@ -181,10 +181,12 @@ namespace MuqDice
             if (type.EndsWith("Enum[]"))
             {
                 Type t = typeof(Database).Assembly.GetType(type.Substring(0, type.Length - 2));
-                if (t == null) t = typeof(Database).Assembly.GetType(type.Substring(0, type.Length - 2));
+                if (t == null) t = typeof(Database).Assembly.GetType("MuqDice." + type.Substring(0, type.Length - 2));
                 sbCache.Clear();
                 string[] sp = value.Split(',');
-                foreach (string s in sp) sbCache.Append((int)Enum.Parse(t, value));
+                foreach (string s in sp) 
+                    sbCache.Append((int)Enum.Parse(t, s) + ",");
+                sbCache.Remove(sbCache.Length - 1, 1);
                 return $"[{sbCache.ToString()}]";
             }
             if (type.EndsWith("Enum"))
@@ -192,7 +194,7 @@ namespace MuqDice
                 try
                 {
                     Type t = typeof(Database).Assembly.GetType(type);
-                    if (t == null) t = typeof(Database).Assembly.GetType(type);
+                    if (t == null) t = typeof(Database).Assembly.GetType("MuqDice." + type);
                     return ((int)Enum.Parse(t, value)).ToString();
                 }
                 catch

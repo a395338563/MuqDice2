@@ -8,6 +8,11 @@ namespace MuqDice
 {
     public class Enemy : Unit
     {
+        public Enemy(Battle battle, int configId) : base(battle)
+        {
+
+        }
+
         public int ConfigId;
         public UnitConfig Config => Database.Instance.Get<UnitConfig>(ConfigId);
     }

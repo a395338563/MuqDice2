@@ -19,6 +19,7 @@ namespace MuqDice
             try
             {
                 await ResourcesManager.Instance.LoadBundleAsync(PathHelper.DataPath);
+                Add<MagicConfig>("magic");
                 //Add<UnitConfig>("UnitConfig");
                 //Add<SkillConfig>("SkillConfig");
                 //Add<SkillEffectConfig>("SkillEffectConfig");
@@ -31,7 +32,7 @@ namespace MuqDice
             }
             catch (Exception e)
             {
-                Debug.Log(e);
+                Debug.LogError(e);
             }
         }
 
@@ -46,6 +47,11 @@ namespace MuqDice
         {
             dic.TryGetValue(typeof(T), out IConfig[] r);
             return r.FirstOrDefault(x => x._Id == id) as T;
+        }
+
+        public T[] GetAll<T>() where T : class, IConfig
+        {
+            return dic[typeof(T)].Select(x => x as T).ToArray();
         }
 
         public T Get<T>(Func<T, bool> match) where T : class, IConfig

@@ -1,0 +1,1 @@
+{ "_t" : "System.Collections.Generic.List`1[[MuqDice.SkillConfig, Model]]", "_v" : [{ "_Id" : "火球" }, { "_Id" : "蒸汽" }] }

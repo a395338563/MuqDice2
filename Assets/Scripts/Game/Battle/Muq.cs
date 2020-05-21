@@ -8,6 +8,11 @@ namespace MuqDice
 {
     public class Muq : Unit
     {
+        public Muq(Battle battle, Player player):base(battle)
+        {
+            Dices = new List<Dice>();
+        }
+
         public List<Dice> Dices;
 
         public List<int> GetSkillRange()
@@ -18,6 +23,11 @@ namespace MuqDice
         public List<int> GetSkillArea(int pos)
         {
             throw new Exception();
+        }
+
+        public void Throw(List<int> dice)
+        {
+
         }
     }
 }
