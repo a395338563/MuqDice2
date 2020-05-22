@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="127,145">
+  <displayList>
+    <loader id="n2_ief9" name="Image" xy="0,0" size="127,145" url="ui://9wo5736qief92"/>
+    <component id="n3_ief9" name="Hp" src="ief94" fileName="Hp.xml" xy="-24,151" size="180,20">
+      <ProgressBar value="22" max="100"/>
+    </component>
+    <text id="n4_ief9" name="CastingSkill" xy="62,-13" pivot="0.5,0.5" anchor="true" size="111,24" fontSize="16" color="#ffffff" strokeColor="#000000" autoClearText="true" text="正准备使用123"/>
+  </displayList>
+</component>

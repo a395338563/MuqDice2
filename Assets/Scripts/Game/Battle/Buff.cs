@@ -10,5 +10,7 @@ namespace MuqDice
     {
         public int ConfigId;
         public BuffConfig Config => Database.Instance.Get<BuffConfig>(ConfigId);
+
+        public int LastTime;
     }
 }

@@ -12,6 +12,8 @@ namespace MuqDice
         public int[] FaceIds = new int[6];
         public int NowFace;
 
+        public DiceFaceConfig NowFaceConfig => Database.Instance.Get<DiceFaceConfig>(FaceIds[NowFace]);
+
         public List<DiceFaceConfig> GetFaces()
         {
             return FaceIds.Select(x => Database.Instance.Get<DiceFaceConfig>(x)).ToList();

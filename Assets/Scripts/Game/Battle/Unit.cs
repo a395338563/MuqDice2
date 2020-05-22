@@ -50,5 +50,10 @@ namespace MuqDice
             if (Hp < 0) Hp = 0;
             return damage;
         }
+
+        public bool Alve()
+        {
+            return Hp > 0;
+        }
     }
 }

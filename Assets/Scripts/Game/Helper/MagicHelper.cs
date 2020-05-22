@@ -8,7 +8,7 @@ namespace MuqDice
 {
     public class MagicHelper
     {
-        public static MagicConfig GetMagic(ElementEnum[] elements)
+        public static MagicConfig GetMagic(List<ElementEnum> elements)
         {
             //var es = elements.Distinct();
             List<MagicConfig> list = new List<MagicConfig>();
@@ -34,7 +34,7 @@ namespace MuqDice
                 {
                     if (x.Elements[i] != elements[i]) return i;
                 }
-                return elements.Length;
+                return elements.Count;
             }).ToList();
             int index = c.IndexOf(c.Max());
             return list[index];

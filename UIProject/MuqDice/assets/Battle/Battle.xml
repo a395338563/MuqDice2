@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1920,1080">
+  <displayList>
+    <graph id="n1_ief9" name="n1" xy="0,638" size="1920,442" type="rect" fillColor="#ff663333"/>
+    <image id="n3_ief9" name="PlayerImage" src="ief93" fileName="ATH000801(1).png" xy="35,670" size="179,272"/>
+    <graph id="n4_ief9" name="n4" xy="239,638" size="12,442" type="rect" lineSize="0" fillColor="#ff000000"/>
+    <list id="n6_ief9" name="DiceList" xy="270,655" size="835,109" layout="row" overflow="scroll" colGap="3" defaultItem="ui://9wo5736qief91">
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <text id="n7_ief9" name="SkillName" xy="270,796" size="180,59" fontSize="44" color="#ffffff" strokeColor="#000000" autoClearText="true" text="火神之光"/>
+    <text id="n8_ief9" name="SkillDesc" xy="268,868" size="904,191" fontSize="44" color="#ffffff" autoSize="none" strokeColor="#000000" autoClearText="true" text="火神之光，灼烧！！"/>
+    <list id="n10_ief9" name="Timeline" xy="1796,53" size="107,874" overflow="scroll" lineGap="2" defaultItem="ui://9wo5736qief96">
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+  </displayList>
+</component>

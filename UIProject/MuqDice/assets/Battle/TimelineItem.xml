@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="100,41" extention="Label">
+  <displayList>
+    <graph id="n10_ief9" name="n10" xy="0,0" size="100,41" type="rect"/>
+    <text id="n11_ief9" name="title" xy="50,20" pivot="0.5,0.5" anchor="true" size="70,53" fontSize="39" text="123"/>
+  </displayList>
+</component>
