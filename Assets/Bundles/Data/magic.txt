@@ -1,1 +1,1 @@
-{ "_t" : "System.Collections.Generic.List`1[[MuqDice.MagicConfig, Model]]", "_v" : [{ "Elements" : [3, 3], "_Id" : "火球" }, { "Elements" : [3, 2], "SkillId" : 1, "_Id" : "蒸汽" }] }
+{ "_t" : "System.Collections.Generic.List`1[[MuqDice.MagicConfig, Model]]", "_v" : [{ "Elements" : [3, 3], "_Id" : "火" }, { "Elements" : [1], "SkillId" : 1, "_Id" : "风" }, { "Elements" : [5, 5, 5], "SkillId" : 2, "_Id" : "日" }] }

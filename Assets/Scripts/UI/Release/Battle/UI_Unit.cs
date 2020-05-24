@@ -7,6 +7,9 @@ namespace MuqDice.UI.Battle
 {
     public partial class UI_Unit : GComponent
     {
+        public Controller m_showUnit;
+        public Controller m_enemy;
+        public Controller m_Effected;
         public GLoader m_Image;
         public GProgressBar m_Hp;
         public GTextField m_CastingSkill;
@@ -21,9 +24,12 @@ namespace MuqDice.UI.Battle
         {
             base.ConstructFromXML(xml);
 
-            m_Image = (GLoader)GetChildAt(0);
-            m_Hp = (GProgressBar)GetChildAt(1);
-            m_CastingSkill = (GTextField)GetChildAt(2);
+            m_showUnit = GetControllerAt(0);
+            m_enemy = GetControllerAt(1);
+            m_Effected = GetControllerAt(2);
+            m_Image = (GLoader)GetChildAt(1);
+            m_Hp = (GProgressBar)GetChildAt(2);
+            m_CastingSkill = (GTextField)GetChildAt(3);
             Init();
         }
         partial void Init();

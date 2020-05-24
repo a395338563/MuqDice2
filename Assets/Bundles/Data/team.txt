@@ -1,1 +1,1 @@
-{ "_t" : "System.Collections.Generic.List`1[[MuqDice.TeamConfig, Model]]", "_v" : [] }
+{ "_t" : "System.Collections.Generic.List`1[[MuqDice.TeamConfig, Model]]", "_v" : [{ "MapSize" : 8, "UnitIds" : [1, 1], "UnitPos" : [5, 6], "PlayerPos" : 1, "_Id" : "测试关" }] }

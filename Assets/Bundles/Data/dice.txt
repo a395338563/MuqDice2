@@ -1,1 +1,1 @@
-{ "_t" : "System.Collections.Generic.List`1[[MuqDice.DiceConfig, Model]]", "_v" : [] }
+{ "_t" : "System.Collections.Generic.List`1[[MuqDice.DiceConfig, Model]]", "_v" : [{ "QualityAll" : 7, "_Id" : "测试骰子1" }, { "Faces" : [0, 0, 0, 0, 0, 0], "_Id" : "测试骰子2" }, { "Qualitys" : [1, 1, 1, 1, 1, 2], "_Id" : "测试骰子3" }, { "Faces" : [1, 2], "Qualitys" : [1, 1, 1, 2], "_Id" : "测试骰子4" }] }

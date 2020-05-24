@@ -50,7 +50,7 @@ namespace MuqDice
 
         public static string DataPath = "Bundles/Data";
         public static string UIPath = "Bundles/UI/";
-        public static string UnitPath = "Bundles/Spine/";
+        public static string UnitPath = "Bundles/Unit/";
         public static string AnimationPath = "Bundles/Animation/";
     }
 }

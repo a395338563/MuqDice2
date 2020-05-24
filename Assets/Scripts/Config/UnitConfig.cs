@@ -9,8 +9,9 @@ namespace MuqDice
     public class UnitConfig : IConfig
     {
         public string _Id { get; set; }
-        public string MaxHp;
-        public string StartSp;
+        public string Model;
+        public int MaxHp;
+        public int StartSp;
         public int[] Skills;
     }
 }

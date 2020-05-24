@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1920,1080">
+  <controller name="tip" pages="0,,1,,2," selected="2"/>
   <displayList>
+    <graph id="n24_p9w6" name="n24" xy="0,0" size="1920,1080" type="rect" lineSize="0" fillColor="#ffcccccc"/>
     <graph id="n1_ief9" name="n1" xy="0,638" size="1920,442" type="rect" fillColor="#ff663333"/>
     <image id="n3_ief9" name="PlayerImage" src="ief93" fileName="ATH000801(1).png" xy="35,670" size="179,272"/>
     <graph id="n4_ief9" name="n4" xy="239,638" size="12,442" type="rect" lineSize="0" fillColor="#ff000000"/>
-    <list id="n6_ief9" name="DiceList" xy="270,655" size="835,109" layout="row" overflow="scroll" colGap="3" defaultItem="ui://9wo5736qief91">
+    <list id="n6_ief9" name="DiceList" xy="270,655" size="835,109" layout="row" selectionMode="none" colGap="3" defaultItem="ui://9wo5736qief91">
       <item/>
       <item/>
       <item/>
@@ -12,7 +14,7 @@
     </list>
     <text id="n7_ief9" name="SkillName" xy="270,796" size="180,59" fontSize="44" color="#ffffff" strokeColor="#000000" autoClearText="true" text="火神之光"/>
     <text id="n8_ief9" name="SkillDesc" xy="268,868" size="904,191" fontSize="44" color="#ffffff" autoSize="none" strokeColor="#000000" autoClearText="true" text="火神之光，灼烧！！"/>
-    <list id="n10_ief9" name="Timeline" xy="1796,53" size="107,874" overflow="scroll" lineGap="2" defaultItem="ui://9wo5736qief96">
+    <list id="n10_ief9" name="Timeline" xy="1796,53" size="107,874" lineGap="2" defaultItem="ui://9wo5736qief96">
       <item/>
       <item/>
       <item/>
@@ -34,5 +36,29 @@
       <item/>
       <item/>
     </list>
+    <component id="n11_p9w6" name="Unit0" src="ief95" fileName="Unit.xml" xy="12,455" size="127,145" group="n21_p9w6"/>
+    <component id="n12_p9w6" name="Unit1" src="ief95" fileName="Unit.xml" xy="194,455" size="127,145" group="n21_p9w6"/>
+    <component id="n13_p9w6" name="Unit2" src="ief95" fileName="Unit.xml" xy="376,455" size="127,145" group="n21_p9w6"/>
+    <component id="n14_p9w6" name="Unit3" src="ief95" fileName="Unit.xml" xy="558,455" size="127,145" group="n21_p9w6"/>
+    <component id="n15_p9w6" name="Unit4" src="ief95" fileName="Unit.xml" xy="740,455" size="127,145" group="n21_p9w6"/>
+    <component id="n16_p9w6" name="Unit5" src="ief95" fileName="Unit.xml" xy="922,455" size="127,145" group="n21_p9w6"/>
+    <component id="n17_p9w6" name="Unit6" src="ief95" fileName="Unit.xml" xy="1104,455" size="127,145" group="n21_p9w6"/>
+    <component id="n18_p9w6" name="Unit7" src="ief95" fileName="Unit.xml" xy="1286,455" size="127,145" group="n21_p9w6"/>
+    <component id="n19_p9w6" name="Unit8" src="ief95" fileName="Unit.xml" xy="1468,455" size="127,145" group="n21_p9w6"/>
+    <component id="n20_p9w6" name="Unit9" src="ief95" fileName="Unit.xml" xy="1650,455" size="127,145" group="n21_p9w6"/>
+    <group id="n21_p9w6" name="n21" xy="12,455" size="1765,145" advanced="true" layout="hz" colGap="55" excludeInvisibles="true"/>
+    <list id="n23_p9w6" name="MiniMap" xy="860,82" size="200,21" layout="row" colGap="5" defaultItem="ui://9wo5736qp9w67" autoClearItems="true">
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <text id="n25_p9w6" name="tipText" xy="960,220" pivot="0.5,0.5" anchor="true" size="286,63" fontSize="47" vars="true" text="发动{s=火神之光}">
+      <gearText controller="tip" pages="1,2" values="选择一个地点使用{s=火神之光}|发动{s=火神之光}" default="悬浮敌人可以查看攻击范围"/>
+    </text>
   </displayList>
 </component>

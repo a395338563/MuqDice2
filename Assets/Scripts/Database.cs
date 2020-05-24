@@ -19,7 +19,15 @@ namespace MuqDice
             try
             {
                 await ResourcesManager.Instance.LoadBundleAsync(PathHelper.DataPath);
+                Add<BuffConfig>("buff");
+                Add<DiceConfig>("dice");
+                Add<DiceFaceConfig>("diceFace");
                 Add<MagicConfig>("magic");
+                Add<RandomDiceConfig>("randomDice");
+                Add<SkillConfig>("skill");
+                Add<SystemConfig>("system");
+                Add<TeamConfig>("team");
+                Add<UnitConfig>("unit");
                 //Add<UnitConfig>("UnitConfig");
                 //Add<SkillConfig>("SkillConfig");
                 //Add<SkillEffectConfig>("SkillEffectConfig");

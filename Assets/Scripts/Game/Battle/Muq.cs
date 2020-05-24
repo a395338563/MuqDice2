@@ -10,11 +10,13 @@ namespace MuqDice
     {
         public Skill TempSkill;
         public List<Dice> Dices;
-        public int Pos => Array.IndexOf(Battle.Units, this);
+        public override UnitConfig Config => Database.Instance.Get<UnitConfig>(0);
 
         public Muq(Battle battle, Player player):base(battle)
         {
-            Dices = new List<Dice>();
+            Dices = player.Dices.Select(x => new Dice(battle, x)).ToList();
+            MaxHp = Config.MaxHp;
+            Hp = MaxHp;
         }
 
         public List<int> GetSkillRange()
@@ -27,20 +29,42 @@ namespace MuqDice
             return TempSkill.GetEffectArea(pos);
         }
 
-        public void Throw(List<int> dice)
+        public void predictMagic(List<int> dice)
         {
-            Sp -= dice.Count;
+            if (dice.Count == 0)
+            {
+                TempSkill = null;
+                return;
+            }
             List<ElementEnum> elements = new List<ElementEnum>();
             foreach (var index in dice)
             {
                 elements.AddRange(Dices[index].NowFaceConfig.Elements);
-                Dices[index].ReRoll();
             }
             var magicConfig = MagicHelper.GetMagic(elements);
             if (magicConfig != null)
             {
                 TempSkill = GetSkill(magicConfig.SkillId);
             }
+            else
+            {
+                TempSkill = null;
+            }
+        }
+
+        public void Cast(List<int> dice,int pos)
+        {
+            if (dice.Count == 0)
+            {
+                return;
+            }
+            Sp -= dice.Count;
+            predictMagic(dice);
+            foreach (var index in dice)
+            {
+                Dices[index].ReRoll();
+            }
+            TempSkill.Cast(pos);
         }
 
         protected Skill GetSkill(int skillId)

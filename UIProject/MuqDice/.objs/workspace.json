@@ -5,15 +5,15 @@
     "ui://9wo5736qief95",
     "ui://9wo5736qief91"
   ],
-  "libview.firstColumnWidth": 283,
-  "auxline1": true,
   "libview.iconScale": 0,
-  "backgroundColor": 6710886,
+  "auxline1": true,
   "doc.activeDoc": "ui://9wo5736qief95",
-  "libview.currentGroup": "",
-  "canvasColor": 10066329,
-  "auxline2": true,
   "libview.twoColumn": false,
+  "libview.currentGroup": "",
+  "libview.firstColumnWidth": 283,
+  "auxline2": true,
+  "backgroundColor": 6710886,
+  "canvasColor": 10066329,
   "libview.expandedNodes": [
     "9wo5736q",
     "/"

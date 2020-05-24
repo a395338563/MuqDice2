@@ -13,13 +13,19 @@ namespace MuqDice
             this.Battle = battle;
         }
         public Battle Battle;
+
+        public int ConfigId;
+        public virtual UnitConfig Config => Database.Instance.Get<UnitConfig>(ConfigId);
+
         public int MaxHp;
         public int Hp;
         public int Sp;
 
-        public List<Skill> Skills;
-        public List<Buff> Buffs;
+        public List<Skill> Skills = new List<Skill>();
+        public List<Buff> Buffs = new List<Buff>();
         public Skill CastingSkill;
+
+        public int Pos => Array.IndexOf(Battle.Units, this);
 
         public void CastSkill(Skill skill)
         {
@@ -55,5 +61,13 @@ namespace MuqDice
         {
             return Hp > 0;
         }
+        public void MoveTo(int pos)
+        {
+            int selfPos = this.Pos;
+            var targetUnit = Battle.Units[pos];
+            Battle.Units[pos] = this;
+            Battle.Units[selfPos] = targetUnit;
+        }
+
     }
 }

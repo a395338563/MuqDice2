@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 9447fd361dacaee46a9a0aa04e279313
+guid: d4d68014d34afda46a03709287d7db77
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -37,7 +37,7 @@ TextureImporter:
     wrapU: -1
     wrapV: -1
     wrapW: -1
-  nPOTScale: 1
+  nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
   spriteMode: 0
@@ -99,5 +99,5 @@ TextureImporter:
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
   userData: 
-  assetBundleName: bundles/ui/battleres
+  assetBundleName: "bundles/unit/\u742A\u9732\u8BFA"
   assetBundleVariant: 

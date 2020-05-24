@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="20,20">
+  <controller name="info" pages="2,,0,,1," selected="0"/>
+  <displayList>
+    <graph id="n0_p9w6" name="n0" xy="0,0" size="20,20" type="eclipse"/>
+    <graph id="n1_p9w6" name="n1" xy="2,2" size="16,16" type="eclipse" lineSize="0" fillColor="#ff66ff00">
+      <gearDisplay controller="info" pages="0,1"/>
+      <gearColor controller="info" pages="0,1" values="#ff0000|#66ff00" default="#66ff00"/>
+    </graph>
+  </displayList>
+</component>

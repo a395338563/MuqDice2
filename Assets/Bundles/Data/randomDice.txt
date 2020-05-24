@@ -1,1 +1,1 @@
-{ "_t" : "System.Collections.Generic.List`1[[MuqDice.RandomDiceConfig, Model]]", "_v" : [] }
+{ "_t" : "System.Collections.Generic.List`1[[MuqDice.RandomDiceConfig, Model]]", "_v" : [{ "Sum" : 7, "FaceQualitys" : [1, 1, 1, 1, 1, 2], "Weight" : 1, "_Id" : "7_1" }, { "Sum" : 8, "FaceQualitys" : [1, 1, 1, 1, 2, 2], "Weight" : 5, "_Id" : "8_1" }, { "Sum" : 8, "FaceQualitys" : [1, 1, 1, 1, 1, 3], "Weight" : 10, "_Id" : "8_2" }] }

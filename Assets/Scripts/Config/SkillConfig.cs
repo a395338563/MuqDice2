@@ -10,10 +10,16 @@ namespace MuqDice
     {
         public string _Id { get; set; }
         public string Type;
-        public int Range;
+        public int RangMin;
+        public int RangeMax;
         public int Area;
         public int Damage;
+        public int Displacement;
         public int CastTime;
         public int[] Buffs;
+        public string Description;
+        public SkillDecisionEnum Decision;
+        public int Priority;
+        public int Weight;
     }
 }

@@ -3,11 +3,12 @@
   <resources>
     <component id="ief90" name="Battle.xml" path="/" exported="true"/>
     <component id="ief91" name="Dice.xml" path="/"/>
-    <image id="ief92" name="ATH000801.png" path="/" scale9grid="0,0,-73,-55"/>
     <image id="ief93" name="ATH000801(1).png" path="/"/>
     <component id="ief94" name="Hp.xml" path="/"/>
     <component id="ief95" name="Unit.xml" path="/" exported="true"/>
     <component id="ief96" name="TimelineItem.xml" path="/"/>
+    <component id="p9w67" name="MiniMap.xml" path="/"/>
+    <image id="p9w68" name="帕秋莉.png" path="/"/>
   </resources>
   <publish name="" genCode="true"/>
 </packageDescription>

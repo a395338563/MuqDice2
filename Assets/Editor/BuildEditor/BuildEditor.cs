@@ -37,7 +37,7 @@ namespace MuqDice
             //把data文件全打进一个包里
             SetBundleAndAtlasWithoutShare("Assets/" + PathHelper.DataPath + "/", PathHelper.DataPath + "/", false, "Bundles/Data");
 
-            //SetBundleAndAtlasWithoutShare("Assets/" + PathHelper.UnitPath, PathHelper.UnitPath);
+            SetBundleAndAtlasWithoutShare("Assets/" + PathHelper.UnitPath, PathHelper.UnitPath);
 
             //SetBundleAndAtlasWithoutShare("Assets/" + PathHelper.AnimationPath, PathHelper.AnimationPath);
 

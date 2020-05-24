@@ -1,18 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="100,100">
-  <controller name="element" pages="0,,1,,2,,3,,4,,5,,6,,7," selected="7">
-    <remark page="0" value="金"/>
-    <remark page="1" value="木"/>
-    <remark page="2" value="水"/>
-    <remark page="3" value="火"/>
-    <remark page="4" value="土"/>
-    <remark page="5" value="日"/>
-    <remark page="6" value="月"/>
-  </controller>
+<component size="100,100" extention="Button">
+  <controller name="count" pages="0,,1," selected="0"/>
   <displayList>
     <graph id="n0_ief9" name="n0" xy="0,0" size="100,100" type="rect" lineSize="3" corner="25"/>
-    <text id="n1_ief9" name="n1" xy="25,20" pivot="0.5,0.5" size="49,59" fontSize="44" bold="true" text="无">
-      <gearText controller="element" pages="0,1,2,3,4,5,6,7" values="金|木|水|火|土|日|月|无"/>
+    <text id="n1_ief9" name="t0" xy="25,20" pivot="0.5,0.5" size="49,59" fontSize="44" bold="true" text="金">
+      <gearDisplay controller="count" pages="0,1"/>
+      <gearXY controller="count" pages="0" values="25,20" default="6,2"/>
+    </text>
+    <text id="n2_p9w6" name="t1" xy="46,42" size="48,59" fontSize="44" text="木">
+      <gearDisplay controller="count" pages="1"/>
     </text>
   </displayList>
+  <Button mode="Radio" downEffect="dark" downEffectValue=".8"/>
 </component>

@@ -35,10 +35,16 @@ namespace MuqDice
         public List<int> GetUseRange(int pos)
         {
             List<int> result = new List<int>();
-            for (int i = -Config.Range; i <= Config.Range; i++)
+            for (int i = Config.RangMin; i <= Config.RangeMax; i++)
             {
-                if (pos + i < 0 || pos + i >= Battle.Units.Length) continue;
-                result.Add(pos + i);
+                if (pos + i >= 0 && pos + i < Battle.Units.Length)
+                {
+                    result.Add(pos + i);
+                }
+                if (pos - i >= 0 && pos - i < Battle.Units.Length)
+                {
+                    result.Add(pos - i);
+                }
             }
             return result;
         }
@@ -67,6 +73,11 @@ namespace MuqDice
                 if (target == null || !Effective(target)) continue;
                 effect(target);
             }
+            if (Config.Displacement != 0)
+            {
+                int forward = Math.Sign(TargetPos - Unit.Pos);
+                Unit.MoveTo(Unit.Pos + forward * Config.Displacement);
+            }
         }
 
         protected void effect(Unit target)
@@ -77,6 +88,32 @@ namespace MuqDice
         public bool Effective(Unit unit)
         {
             return true;
+        }
+
+        public int DecideUsePos(Muq muq)
+        {
+            int muqPos = muq.Pos;
+            List<int> useRange = GetUseRange(Unit.Pos);
+            switch (Config.Decision)
+            {
+                case SkillDecisionEnum.Fit:
+                    useRange.Sort((x, y) => Math.Abs(x - muqPos) - Math.Abs(y - muqPos));
+                    foreach (var pos in useRange)
+                    {
+                        if (GetEffectArea(pos).Contains(muqPos))
+                        {
+                            return pos;
+                        } 
+                    }
+                    break;
+                case SkillDecisionEnum.Far:
+                    useRange.Sort((x, y) => Math.Abs(y - muqPos) - Math.Abs(x - muqPos));
+                    return useRange[0];
+                case SkillDecisionEnum.Close:
+                    useRange.Sort((x, y) => Math.Abs(x - muqPos) - Math.Abs(y - muqPos));
+                    return useRange[0];
+            }
+            return -1;
         }
     }
 }

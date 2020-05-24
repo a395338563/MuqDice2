@@ -1,1 +1,1 @@
-{ "_t" : "System.Collections.Generic.List`1[[MuqDice.UnitConfig, Model]]", "_v" : [] }
+{ "_t" : "System.Collections.Generic.List`1[[MuqDice.UnitConfig, Model]]", "_v" : [{ "Model" : "帕秋莉", "MaxHp" : 80, "StartSp" : 19, "_Id" : "Muq" }, { "Model" : "琪露诺", "MaxHp" : 20, "StartSp" : 10, "Skills" : [5, 6, 3], "_Id" : "琪露诺" }] }
