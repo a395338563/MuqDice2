@@ -12,7 +12,8 @@ namespace MuqDice
         public string Type;
         public int RangMin;
         public int RangeMax;
-        public int Area;
+        public int AreaMin;
+        public int AreaMax;
         public int Damage;
         public int Displacement;
         public int CastTime;

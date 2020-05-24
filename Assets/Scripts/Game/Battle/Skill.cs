@@ -52,7 +52,10 @@ namespace MuqDice
         public List<int> GetEffectArea(int pos)
         {
             List<int> result = new List<int>();
-            for (int i = -Config.Area; i <= Config.Area; i++)
+            int forward = Math.Sign(pos - Unit.Pos);
+            int min = Math.Min(Config.AreaMin * forward, Config.AreaMax * forward);
+            int max = Math.Max(Config.AreaMin * forward, Config.AreaMax * forward);
+            for (int i = min; i <= max; i++)
             {
                 if (pos + i < 0 || pos + i >= Battle.Units.Length) continue;
                 result.Add(pos + i);
